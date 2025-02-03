@@ -2,10 +2,11 @@
 
 alert("Boas vindas ao jogo do número secreto!");
 
+let numeroMaximo = 50;
 //Utilizacação do MathRandom para gerar o número secreto aleatoriamente(pseudoaleatorio) entre 0 e 1.
 //Uso do parseInt para converter o numero aleatorio gerado para um numero inteiro.
 //Multiplicação por 100 e incrementação de + 1 para que o valor tenha duas casas decimais e que seja acima de 0
-let numeroSecreto = parseInt(Math.random() * 100 + 1);
+let numeroSecreto = parseInt(Math.random() * numeroMaximo + 1);
 
 //console.log apresenta informações console que são úteis para os desenvolvedores durante realização de testes
 console.log(numeroSecreto);
@@ -14,7 +15,7 @@ let tentativas = 1;
 
 //enquanto
 while(chute != numeroSecreto) {
-    chute = prompt("Informe seu palpite de um número entre 1 e 100:");
+    chute = prompt(`Informe seu palpite de um número entre 1 e ${numeroMaximo}:`);
     if (chute == numeroSecreto) {
         break;
     } else {
