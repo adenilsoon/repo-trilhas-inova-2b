@@ -98,5 +98,13 @@ alert(`A área equivale a ${3.14 * (raio * raio)}`);
 
 
 //Intrução 14
-let soma = numero1 + numero2;
+
+//Alert para apresentar o resultado da soma dos valores das variáveis numero1 e numero2
 alert(`A soma de ${numero1} mais ${numero2} é igual a ${numero1 + numero2}`);
+
+//Intrução 15
+let x = 10;
+let y = 20;
+let z = x+y;
+
+console.log(z);
