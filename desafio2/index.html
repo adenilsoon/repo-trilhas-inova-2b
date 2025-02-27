@@ -1,0 +1,140 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Programa de Inovação</title>
+</head>
+<body>
+    <header>
+        
+    </header>
+
+    <section class="principal">
+        
+        <section class="formulario">
+            
+            <a href="">
+                <button class="btn_voltar">
+                    <img src="img/icones/icone_voltar.png" alt="icone de voltar">Voltar
+                </button>
+            </a>
+
+            <div class="conteudo_formulario">
+                <h1>Formulário de inscrição</h1>
+                <h3>Preencha os dados abaixo para fazer sua inscrição no Programa Trilhas.</h3>
+
+                <form method="get" action="">
+                    <div class="info_participantes">
+                        <h2>Informações do participante</h2>
+                        <div>
+                            <p>Nome</p>
+                            <input type="text" name="nome" placeholder="Informe seu nome completo">
+                        </div>
+
+                        <div>
+                            <p>Data de nascimento</p>
+                            <input type="date" name="nascimento" placeholder="Informe sua data de nascimento">
+                        </div>
+                        
+                        <div>
+                            <p>CPF</p>
+                            <input type="number" name="cpf" placeholder="Informe seu CPF">
+                        </div>
+                        
+                        <div>
+                            <p>Sexo</p>
+                            <select name="sexo">
+                                <option value="" disabled selected>Selecione</option>
+                                <option value="feminino">Feminino</option>
+                                <option value="masculino">Masculino</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <p>E-mail</p>
+                            <input type="email" name="email" >
+                        </div>
+                        
+                        <div>
+                            <p>Telefone</p>
+                            <input type="tel" name="telefone" placeholder="Informe seu telefone">
+                        </div>
+                        
+                        <div>
+                            <p>Documento de identidade
+                            <input type="file" name="doc_identidade"></p>
+                        </div>
+                    </div>
+                
+                    <div class="info_endereco">
+                        <h2>Endereço residencial</h2>
+
+                        <div>
+                            <p>CEP</p>
+                            <input type="number" name="cep" placeholder="Informe seu CEP">
+                        </div>
+
+                        <div><p>Rua</p>
+                            <input type="text" name="rua" placeholder="Informe o nome da sua rua">
+                        </div>
+                        
+                        <div><p>Número</p>
+                            <input type="text" name="numero_casa" placeholder="Informe o n° da sua residência">
+                        </div>
+                        
+                        <div><p>Cidade</p>
+                            <input type="text" name="cidade" placeholder="Informe sua cidade">
+                        </div>
+                        
+                        <div><p>Estado</p>
+                            <input type="text" name="uf" placeholder="Informe seu estado">
+                        </div>
+                        
+                        <div><p>Comprovante de residência<input type="file" name="comp_residencia"></p>
+                        </div>
+                    </div>
+
+                    <div class="selecao_trilha">
+                        
+                        <div>
+                            <h2>Trilhas de aprendizagem</h2>
+                            <p>Selecione apenas uma trilha</p>
+                        </div>
+                        
+                        <div><input type="radio" name="trilhas" value="front_end">Programação Front-end<br>
+                        </div>
+                        
+                        <div><input type="radio" name="trilhas" value="back_end">Programação Back-end<br>
+                        </div>
+
+                        <div><input type="radio" name="trilhas" value="jogos">Programação de Jogos<br>
+                        </div>
+
+                        <div><input type="radio" name="trilhas" value="design">Design e Experiência<br>
+                        </div>
+                        
+                        <div><input type="radio" name="trilhas" value="ciencia_dados">Ciência de Dados<br>
+                        </div>
+                    </div>
+
+
+                        <p><input class="concordo_termos" type="checkbox" name="concordancia_termos_politica">Declaro que li e concordo com os <a href=""><strong>Termos e Condições</strong></a> e com a <a href=""><strong>Política de Privacidade</strong></a>.</p>
+                        
+                        <div class="botoes_form">
+                            <input class="btn_cancelar" type="button" name="botao_cancelar" value="Cancelar">
+                            <input class="btn_enviar" type="submit" name="botao_enviar" value="Enviar">
+                        </div>
+                </form>
+            </div>
+            
+        </section>
+
+        <section class="imagens_laterais">
+            <img src="img/banner.png" alt="Imagem vetorial de um homem sentado em cima de três livros, segurando um notebook e icones de mochila e video game ao lado">
+            <img src="img/logo_trilhas_e_inovama.png" alt="logo do programa trilhas e inova maranhão">
+        </section>
+
+    </section>
+</body>
+</html>

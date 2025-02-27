@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 0;
+}
+
+h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 120%;
+    color: #57534E;
+}
+
+p {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 120%;
+    color: #57534E;
+}
+
+.principal {
+    display: flex;
+    
+}
+
+.formulario {
+    flex: 1; /* Ocupará todo o espaço disponível à esquerda */
+    padding: 64px;
+    overflow-y: auto; /* Adiciona rolagem caso o formulário seja longo */
+    height: 100vh; /* Garante que a rolagem funcione corretamente */
+    background-color: #FFFFFF;
+}
+
+.conteudo-formulario {
+    display: flex;
+    flex-direction: column; /* Garante que os elementos fiquem em coluna */
+}
+
+.info_participantes, .info_endereco, .selecao_trilha {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.imagens_laterais {
+    background-color: #2135a6;
+    width: 50%; /* Define um tamanho fixo para a lateral */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: sticky;
+    right: 0;
+    top: 0;
+    height: 100vh; /* Mantém o tamanho fixo e impede rolagem */
+}
+
+/**/
+
+.imagens_laterais img {
+    width: 60%;
+    max-width: 90%;
+
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.botoes_form {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+input:not(.concordo_termos, .btn_cancelar, .btn_enviar), select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    color: #ccc;   
+}
+
+select {
+    cursor: pointer;
+}
+
+.btn_voltar {
+    display: flex;
+    background: none;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn_voltar img {
+    width: 30px;
+    height: auto;
+}
