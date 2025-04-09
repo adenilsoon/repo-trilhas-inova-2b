@@ -266,3 +266,10 @@ select {
     border: 2px solid #E43A12; /* Cor da borda ao ser selecionado */
 }
 
+.erro {
+    color: red;
+    font-size: 0.85rem;
+    display: block;
+    margin-top: 2px;
+  }
+  
