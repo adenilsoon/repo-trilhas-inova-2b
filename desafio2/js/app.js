@@ -1,18 +1,4 @@
 console.log("Js funcionando");
-// Captura o botão de salvar
-const botaoSalvar = document.getElementById("btn_salvar");
-
-// Adiciona um evento de clique no botão
-botaoSalvar.addEventListener("click", function (e) {
-    e.preventDefault(); // Impede o envio do formulário
-
-    const email = document.getElementById("email").value.trim();
-
-    if (!validarEmail(email)) {
-        alert("Atenção: o endereço de email digitado NÃO é válido.");
-        return;
-    }
-});
 
 // Função de validação do e-mail
 function validarEmail(email) {
@@ -47,20 +33,25 @@ formulario.addEventListener("submit", function(e) {
     const sexo = document.getElementById("sexo").value.trim();
     const email = document.getElementById("email").value.trim();
     const telefone = document.getElementById("telefone").value.trim();
-    const docIdentidade = document.getElementById("doc_identidade").files.length;
+    const docIdentidade = document.getElementById("doc_identidade");
     const cep = document.getElementById("cep").value.trim();
     const rua = document.getElementById("rua").value.trim();
     const numeroCasa = document.getElementById("numero_casa").value.trim();
     const cidade = document.getElementById("cidade").value.trim();
     const estado = document.getElementById("estado").value.trim();
-    const compResidencia = document.getElementById("comp_residencia").files.length;
+    const compResidencia = document.getElementById("comp_residencia");
     const trilhaSelecionada = document.querySelector("input[name='trilha']:checked");
     const userId = document.getElementById("userId").value.trim();
     const senha = document.getElementById("senha").value.trim();
-    const termosAceitos = document.querySelector("input[name='concordancia_termos_politica']:checked");
+    const termosAceitos = document.querySelector("input[id='concordo_termos']:checked");
 
     limparErros();
     let temErro = false;
+
+    if (nome === "" || dataNasc === "" || cpf === "" || sexo === "" || email === "" || telefone === "" || docIdentidade === 0 || cep === "" || rua === "" || numeroCasa === "" || cidade === "" || estado === "" || compResidencia === 0 || !trilhaSelecionada || userId === "" || senha === "" || !termosAceitos) {
+        alert("Atenção: verifique o correto preenchimento de todos os campos obrigatórios.\n\nSe atente também a concordância com nossos Termos e Condições e com a nossa Política de Privacidade.");
+        temErro = true;
+    }
 
     if (nome === "") {
         mostrarErro("nome", "Por favor, preencha o seu nome.");
@@ -83,7 +74,10 @@ formulario.addEventListener("submit", function(e) {
     }
 
     if (email === "") {
-        mostrarErro("email", "Por favor, informe o seu endereço de e-mail corretamente.");
+        mostrarErro("email", "Por favor, informe o seu endereço de email.");
+        temErro = true;
+    }else if (!validarEmail(email)) {
+        mostrarErro("email", "O endereço de email digitado não é válido.");
         temErro = true;
     }
 
@@ -117,13 +111,28 @@ formulario.addEventListener("submit", function(e) {
         temErro = true;
     }
 
-    // if (trilhaSelecionada === false) {
-    //     mostrarErro("trilha", "Por favor, informe o nome do seu estado.");
-    //     temErro = true;
-    // }
+    if (compResidencia.files.length === 0) {
+        mostrarErro("comp_residencia", "Por favor, insira um comprovante de residência (conta de água, luz, telefone...).");
+        temErro = true;
+    }
+
+    if (doc_identidade.files.length === 0) {
+        mostrarErro("doc_identidade", "Por favor, insira um documento de identidade (registro geral, CNH ou carteira de trabalho).");
+        temErro = true;
+    }
+
+    if (trilhaSelecionada === null) {
+        mostrarErro("trilha", "Você precisa selecionar em qual trilha de aprendizado deseja se inscrever.");
+        temErro = true;
+    }
+
+    if (termosAceitos === null) {
+        mostrarErro("concordo_termos", "Você precisa concordar com os nossos Termos e Serviços e com a nossa Política de Privacidade.");
+        temErro = true;
+    }
 
     if (userId === "") {
-        mostrarErro("userId", "Preencha o seu nome de usuário.");
+        mostrarErro("userId", "Informe o seu nome de usuário.");
         temErro = true;
     }
 
@@ -131,16 +140,71 @@ formulario.addEventListener("submit", function(e) {
         mostrarErro("senha", "Informe a sua senha para efetuar o login.");
         temErro = true;
     }
-    
 
-    if (nome === "" || dataNasc === "" || cpf === "" || sexo === "" || email === "" || telefone === "" || docIdentidade === 0 || cep === "" || rua === "" || numeroCasa === "" || cidade === "" || estado === "" || compResidencia === 0 || !trilhaSelecionada || userId === "" || senha === "" || !termosAceitos) {
-        alert("Por favor, preencha todos os campos obrigatórios e aceite os termos.");
-        return;
+    
+    if (!temErro) {
+        alert("Inscrição realizada com sucesso!");
     }
 
-    
-    
-    // Se tudo estiver certo:
-    alert("Inscrição realizada com sucesso!");
 });
 
+document.getElementById('btn_salvar').addEventListener('click', () => {
+  
+    const nome = document.getElementById("nome").value.trim();
+    const dataNasc = document.getElementById("data_nasc").value.trim();
+    const cpf = document.getElementById("cpf").value.trim();
+    const sexo = document.getElementById("sexo").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const telefone = document.getElementById("telefone").value.trim();
+    const cep = document.getElementById("cep").value.trim();
+    const rua = document.getElementById("rua").value.trim();
+    const numeroCasa = document.getElementById("numero_casa").value.trim();
+    const cidade = document.getElementById("cidade").value.trim();
+    const estado = document.getElementById("estado").value.trim();
+
+    const inscricao = {
+      nome,
+      dataNasc,
+      cpf,
+      sexo,
+      email,
+      telefone,
+      docIdentidade,
+      cep,
+      rua,
+      numeroCasa,
+      cidade,
+      estado,
+      compResidencia,
+      trilhaSelecionada
+    };
+  
+    // Salvando no localStorage como string
+    localStorage.setItem('inscricaoTemp', JSON.stringify(inscricao));
+  
+    alert('Inscrição salva temporariamente!');
+  });
+
+
+  // Carregar as informações salvas com o localStorage ao carregar a página
+  window.addEventListener('load', () => {
+    const inscricaoSalva = localStorage.getItem('inscricaoTemp');
+  
+    if (inscricaoSalva) {
+      const inscricao = JSON.parse(inscricaoSalva);
+
+      document.getElementById("nome").value = inscricao.nome || '';
+      document.getElementById("data_nasc").value = inscricao.dataNasc || '';
+      document.getElementById("cpf").value = inscricao.cpf || '';
+      document.getElementById("sexo").value = inscricao.sexo || '';
+      document.getElementById("email").value = inscricao.email || '';
+      document.getElementById("telefone").value = inscricao.telefone || '';
+      document.getElementById("cep").value = inscricao.cep || '';
+      document.getElementById("rua").value = inscricao.rua || '';
+      document.getElementById("numero_casa").value = inscricao.numeroCasa || '';
+      document.getElementById("cidade").value = inscricao.cidade || '';
+      document.getElementById("estado").value = inscricao.estado || '';
+    }
+  });
+   
+  

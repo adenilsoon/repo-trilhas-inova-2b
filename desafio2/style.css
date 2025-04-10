@@ -267,8 +267,10 @@ select {
 }
 
 .erro {
-    color: red;
-    font-size: 0.85rem;
+    color: #DC2626;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
     display: block;
     margin-top: 2px;
   }

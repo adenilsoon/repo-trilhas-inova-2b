@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Programas de Inovação - Página de Cadastro</title>
+</head>
+<body>
+    <header>
+        
+    </header>
+
+    <section class="principal">
+
+        <section class="formulario">
+
+            <div class="conteudo_formulario">
+                <div class="titulo_orientacao">
+                    <h1>Cadastro de usuário</h1>
+                    <h3>Caro candidato (a), realize o cadastro de seu usuário e senha em nosso sistema para que tenha acesso ao formulário de inscrição dos Progrmas de Inovação da SECTI.</h3>
+                </div>
+
+                <form method="post" action="" id="form-cadastro" novalidate>
+                    <div class="form-campos-login">
+                        <div>
+                            <p>ID do usuário</p>
+                            <input type="text" id="userId" name="userId" placeholder="Crie um ID de usuário" required>
+                            <span id="erro-userId" class="erro"></span>
+                        </div>
+
+                        <div>
+                            <p>Senha</p>
+                            <input type="password" id="senhaCadastro" name="senhaCadastro" placeholder="Crie uma senha" required>
+                            <span id="erro-senhaCadastro" class="erro"></span>
+                        </div>
+
+                        <div>
+                            <p>Confirmar senha</p>
+                            <input type="password" id="confirmaSenha" name="confirmaSenha" placeholder="Confirme a senha" required>
+                            <span id="erro-confirmaSenha" class="erro"></span>
+                        </div>
+                    </div>
+
+                    <p>
+                        <input id="concordo_termos" class="concordo_termos" type="checkbox" name="concordancia_termos_politica">
+                        Declaro que li e concordo com os <a href=""><span>Termos e Condições</span></a> e com a <a href=""><span>Política de Privacidade</span></a>.
+                    </p>
+                    <span id="erro-concordo_termos" class="erro"></span>
+
+                    <div class="botoes_form">
+                        <input class="btn_cancelar" type="reset" name="botao_cancelar" value="Cancelar">
+                        <input class="btn_enviar" type="submit" name="botao_enviar" value="Cadastrar">
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="imagens_laterais">
+            <img src="img/Ilustration.png" alt="Imagem vetorial de um homem sentado em cima de três livros, segurando um notebook e ícones de mochila e vídeo game ao lado">
+            <img src="img/logo_inova.png" alt="Logo do programa Trilhas e Inova Maranhão">
+        </section>
+
+    </section>
+
+    <script src="js/cadastro.js"></script>
+</body>
+</html>

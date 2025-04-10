@@ -14,7 +14,7 @@
         
         <section class="formulario">
             
-            <a href="" class="btn_voltar">
+            <a href="cadastro.html" class="btn_voltar">
                 <img src="img/icones/arrow-left-02.png" alt="Ícone de voltar"> <p>Voltar</p>
             </a>
 
@@ -75,6 +75,7 @@
                                 <span>Clique aqui para selecionar um arquivo</span>
                             </label>
                             <input type="file" id="doc_identidade" name="doc_identidade"></p>
+                            <span id="erro-doc_identidade" class="erro"></span>
                         </div>
                     </div>
                 
@@ -114,6 +115,7 @@
                                 <span>Clique aqui para selecionar um arquivo</span>
                             </label>
                             <input type="file" id="comp_residencia" name="comp_residencia"></p>
+                            <span id="erro-comp_residencia" class="erro"></span>
                         </div>
                     </div>
 
@@ -123,6 +125,8 @@
                             <h2>Trilhas de aprendizagem</h2>
                             <p>Selecione apenas uma trilha</p>
                         </div>
+                        
+                        <span id="erro-trilha" class="erro"></span>
                         
                         <div class="trilhas">
                             <label class="trilha">
@@ -159,7 +163,6 @@
                                 <img src="img/icones/dados.png" alt="icone trilha de Ciência de Dados">
                                 <span>Ciência de Dados</span>
                             </label>
-                            <span id="erro-trilha" class="erro"></span>
 
                         </div>
                     </div>
@@ -179,11 +182,14 @@
                       
                     </div>
 
-                    <p><input class="concordo_termos" type="checkbox" name="concordancia_termos_politica">Declaro que li e concordo com os <a href=""><span>Termos e Condições</span></a> e com a <a href=""><span>Política de Privacidade</span></a>.</p>
-                        
+                    <p>
+                        <input id="concordo_termos" class="concordo_termos" type="checkbox" name="concordancia_termos_politica">Declaro que li e concordo com os <a href=""><span>Termos e Condições</span></a> e com a <a href=""><span>Política de Privacidade</span></a>.
+                    </p>
+                        <span id="erro-concordo_termos" class="erro"></span>
+                    
                     <div class="botoes_form">
-                        <button id="btn_salvar" type="">Salvar Inscrição</button>
                         <input class="btn_cancelar" type="reset" name="botao_cancelar" value="Cancelar">
+                        <button id="btn_salvar" class="btn_cancelar" type="">Salvar Inscrição</button>
                         <input class="btn_enviar" type="submit" name="botao_enviar" value="Fazer inscrição">
                     </div>
                 </form>
