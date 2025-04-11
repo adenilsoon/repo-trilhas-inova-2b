@@ -23,7 +23,7 @@ const formulario = document.getElementById("form-inscricao");
 
 formulario.addEventListener("submit", function(e) {
     
-    e.preventDefault(); // Impede o envio automático do formulário
+    e.preventDefault(); //impede o envio automático do formulário
 
     console.log("Evento submit disparado");
 
@@ -141,9 +141,20 @@ formulario.addEventListener("submit", function(e) {
         temErro = true;
     }
 
-    
+    // Verificar login e senha para finalizar inscrição
+    const usuarioSalvo = localStorage.getItem("usuarioCadastrado");
+    const senhaSalva = localStorage.getItem("senhaCadastrada");
+
+    if (userId !== usuarioSalvo || senha !== senhaSalva) {
+        alert("Usuário ou senha incorretos! Verifique e tente novamente.");
+        mostrarErro("userId", "Usuário inválido.");
+        mostrarErro("senha", "Senha inválida.");
+        return; // interrompe o envio
+    }
+
     if (!temErro) {
-        alert("Inscrição realizada com sucesso!");
+        alert("Inscrição realizada com sucesso!\n\nRedirecionaremos você para a página inicial...");
+        window.location.href = "index.html";
     }
 
 });
@@ -181,8 +192,7 @@ document.getElementById('btn_salvar').addEventListener('click', () => {
   
     // Salvando no localStorage como string
     localStorage.setItem('inscricaoTemp', JSON.stringify(inscricao));
-  
-    alert('Inscrição salva temporariamente!');
+
   });
 
 
@@ -205,6 +215,8 @@ document.getElementById('btn_salvar').addEventListener('click', () => {
       document.getElementById("cidade").value = inscricao.cidade || '';
       document.getElementById("estado").value = inscricao.estado || '';
     }
-  });
-   
-  
+});
+
+document.getElementById("btn_cancelar").addEventListener("click", () => {
+    window.location.href = "index.html";
+});

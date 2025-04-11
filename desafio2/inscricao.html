@@ -1,0 +1,214 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Programa de Inovação</title>
+</head>
+<body>
+    <header>
+        
+    </header>
+
+    <section class="principal">
+        
+        <section class="formulario">
+            
+            <a href="cadastro.html" class="btn_voltar">
+                <img src="img/icones/arrow-left-02.png" alt="Ícone de voltar"> <p>Voltar</p>
+            </a>
+
+            <div class="conteudo_formulario">
+                <div class="titulo_orientacao">
+                    <h1>Formulário de inscrição</h1>
+                    <h3>Preencha os dados abaixo para fazer sua inscrição no Programa Trilhas.</h3>
+                </div>
+                
+
+                <form method="get" action="" id="form-inscricao" novalidate>
+                    <div class="info_participantes">
+                        <h2>Informações do participante</h2>
+                        <div>
+                            <p>Nome</p>
+                            <input type="text" id="nome" name="nome" placeholder="Informe seu nome completo">
+                            <span id="erro-nome" class="erro"></span>
+                        </div>
+
+                        <div>
+                            <p>Data de nascimento</p>
+                            <input type="date" id="data_nasc" name="nascimento" placeholder="Informe sua data de nascimento">
+                            <span id="erro-data_nasc" class="erro"></span>
+                        </div>
+                        
+                        <div>
+                            <p>CPF</p>
+                            <input type="number" id="cpf" name="cpf" placeholder="Informe seu CPF">
+                            <span id="erro-cpf" class="erro"></span>
+                        </div>
+                        
+                        <div>
+                            <p>Sexo</p>
+                            <select name="sexo" id="sexo">
+                                <option value="" disabled selected>Selecione</option>
+                                <option value="feminino">Feminino</option>
+                                <option value="masculino">Masculino</option>
+                            </select>
+                            <span id="erro-sexo" class="erro"></span>
+                        </div>
+                        
+                        <div>
+                            <p>E-mail</p>
+                            <input type="email" id="email" name="email" placeholder="Insira o seu endereço de e-mail">
+                            <span id="erro-email" class="erro"></span>
+                        </div>
+                        
+                        <div>
+                            <p>Telefone</p>
+                            <input type="tel" id="telefone" name="telefone" placeholder="Informe seu telefone">
+                            <span id="erro-telefone" class="erro"></span>
+                        </div>
+                        
+                        <div class="inserir_doc">
+                            <p>Documento de identidade</p>
+                            <label for="doc_identidade">
+                                <img src="img/icones/cloud-upload.png" al="icone de upload">
+                                <span>Clique aqui para selecionar um arquivo</span>
+                            </label>
+                            <input type="file" id="doc_identidade" name="doc_identidade"></p>
+                            <span id="erro-doc_identidade" class="erro"></span>
+                        </div>
+                    </div>
+                
+                    <div class="info_endereco">
+                        <h2>Endereço residencial</h2>
+
+                        <div>
+                            <p>CEP</p>
+                            <input type="text" id="cep" name="cep" placeholder="Informe seu CEP">
+                            <span id="erro-cep" class="erro"></span>
+                        </div>
+
+                        <div><p>Rua</p>
+                            <input type="text" id="rua" name="rua" placeholder="Informe o nome da sua rua">
+                            <span id="erro-rua" class="erro"></span>
+                        </div>
+                        
+                        <div><p>Número</p>
+                            <input type="text" id="numero_casa" name="numero_casa" placeholder="Informe o n° da sua residência">
+                            <span id="erro-numero_casa" class="erro"></span>
+                        </div>
+                        
+                        <div><p>Cidade</p>
+                            <input type="text" id="cidade" name="cidade" placeholder="Informe sua cidade">
+                            <span id="erro-cidade" class="erro"></span>
+                        </div>
+                        
+                        <div><p>Estado</p>
+                            <input type="text" id="estado" name="uf" placeholder="Informe seu estado">
+                            <span id="erro-estado" class="erro"></span>
+                        </div>
+
+                        <div class="inserir_doc">
+                            <p>Comprovante de residência</p>
+                            <label for="comp_residencia">
+                                <img src="img/icones/cloud-upload.png" al="icone de upload">
+                                <span>Clique aqui para selecionar um arquivo</span>
+                            </label>
+                            <input type="file" id="comp_residencia" name="comp_residencia"></p>
+                            <span id="erro-comp_residencia" class="erro"></span>
+                        </div>
+                    </div>
+
+                    <div class="selecao_trilha">
+                        
+                        <div>
+                            <h2>Trilhas de aprendizagem</h2>
+                            <p>Selecione apenas uma trilha</p>
+                        </div>
+                        
+                        <span id="erro-trilha" class="erro"></span>
+                        
+                        <div class="trilhas">
+                            <label class="trilha">
+                                <input type="radio" name="trilha" value="trilha1">      
+                                <img class="icone_radio" src="img/icones/circle.png" alt="icone de seleção">
+                                <img src="img/icones/front-end.png" alt="icone trilha de Front-end">
+                                <span>Programação Front-end</span>
+                            </label>
+
+                            <label class="trilha">
+                                <input type="radio" name="trilha" value="trilha2">       
+                                <img class="icone_radio" src="img/icones/circle.png" alt="icone de seleção">
+                                <img src="img/icones/back-end.png" alt="icone trilha de Back-end">
+                                <span>Programação Back-end</span>
+                            </label>
+
+                            <label class="trilha">
+                                <input type="radio" name="trilha" value="trilha3">       
+                                <img class="icone_radio" src="img/icones/circle.png" alt="icone de seleção">
+                                <img src="img/icones/jogos.png" alt="icone trilha de Jogos">
+                                <span>Programação de Jogos</span>
+                            </label>
+
+                            <label class="trilha">
+                                <input type="radio" name="trilha" value="trilha4">       
+                                <img class="icone_radio" src="img/icones/circle.png" alt="icone de seleção">
+                                <img src="img/icones/ux.png" alt="icone trilha de Design">
+                                <span>Design e Experiência</span>
+                            </label>
+
+                            <label class="trilha">
+                                <input type="radio" name="trilha" value="trilha5">       
+                                <img class="icone_radio" src="img/icones/circle.png" alt="icone de seleção">
+                                <img src="img/icones/dados.png" alt="icone trilha de Ciência de Dados">
+                                <span>Ciência de Dados</span>
+                            </label>
+
+                        </div>
+                    </div>
+
+                    <div class="form-campos-login">
+                        <div>
+                            <h2>Faça login</h2>
+                            <p>Para finalizar sua unscrição, confirme suas crendenciais de acesso.</p>
+                        </div>
+
+                        <div>
+                            <p>ID do usuário</p>
+                            <input type="text" id="userId" name="userId" required>
+                            <span id="erro-userId" class="erro"></span>
+                        </div>
+
+                        <div>
+                            <p>Senha</p>
+                            <input type="password" id="senha" name="senha" required>
+                            <span id="erro-senha" class="erro"></span>
+                        </div>
+                      
+                    </div>
+
+                    <p>
+                        <input id="concordo_termos" class="concordo_termos" type="checkbox" name="concordancia_termos_politica">Declaro que li e concordo com os <a href=""><span>Termos e Condições</span></a> e com a <a href=""><span>Política de Privacidade</span></a>.
+                    </p>
+                        <span id="erro-concordo_termos" class="erro"></span>
+                    
+                    <div class="botoes_form">
+                        <button class="btn_cancelar" id="btn_cancelar" type="button" name="botao_cancelar">Cancelar</button>
+                        <button id="btn_salvar" class="btn_cancelar" type="">Salvar Inscrição</button>
+                        <input class="btn_enviar" type="submit" name="botao_enviar" value="Fazer inscrição">
+                    </div>
+                </form>
+            </div>
+            
+        </section>
+
+        <section class="imagens_laterais">
+            <img src="img/Ilustration.png" alt="Imagem vetorial de um homem sentado em cima de três livros, segurando um notebook e icones de mochila e video game ao lado">
+            <img src="img/logo_inova.png" alt="logo do programa trilhas e inova maranhão">
+        </section>
+
+    </section>
+
+    <script src="js/inscricao.js"></script>
+</body>
+</html>

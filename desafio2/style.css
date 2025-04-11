@@ -75,7 +75,7 @@ p a {
 }
 
 /*espaçamento entre os elementos das divs*/
-.titulo_orientacao, .info_participantes, .info_endereco {
+.titulo_orientacao, .info_participantes, .info_endereco, .form-campos-login {
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -130,6 +130,10 @@ input:not(.concordo_termos, .btn_cancelar, .btn_enviar), select {
 
 select {
     cursor: pointer;
+}
+
+.form-campos-login {
+    margin-top: 20px;
 }
 
 .btn_cancelar {
@@ -273,5 +277,5 @@ select {
     font-size: 14px;
     display: block;
     margin-top: 2px;
-  }
+}
   
