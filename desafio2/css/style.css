@@ -278,4 +278,68 @@ select {
     display: block;
     margin-top: 2px;
 }
-  
+
+/* =================== RESPONSIVIDADE =================== */
+
+@media (max-width: 1024px) {
+    .formulario {
+        padding: 32px; /* reduz o padding */
+    }
+
+    .trilhas {
+        grid-template-columns: 1fr; /* 1 trilha por linha */
+    }
+}
+
+@media (max-width: 768px) {
+    .principal {
+        flex-direction: column; /* muda layout para coluna */
+    }
+
+    .imagens_laterais {
+        position: relative; /* remove sticky */
+        width: 100%; /* ocupa toda largura */
+        height: auto; /* altura automática */
+        padding: 20px 0;
+    }
+
+    .formulario {
+        padding: 24px; /* reduz mais o padding */
+        height: auto; /* altura automática */
+    }
+
+    .botoes_form {
+        flex-direction: column; /* botões em coluna */
+        align-items: stretch; /* largura total */
+    }
+
+    .btn_cancelar, .btn_enviar {
+        width: 100%; /* botões ocupam toda a linha */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    p, .btn_voltar p {
+        font-size: 13px;
+    }
+
+    .formulario {
+        padding: 16px;
+    }
+
+    input:not(.concordo_termos, .btn_cancelar, .btn_enviar), select {
+        font-size: 14px;
+    }
+
+    .trilha span {
+        font-size: 14px;
+    }
+}
