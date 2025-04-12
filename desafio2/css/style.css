@@ -262,7 +262,7 @@ select {
 
 /* muda o ícone da bolinha quando a trilha for selecionada*/
 .trilha input:checked + .icone_radio {
-    content: url("img/icones/checkmark-circle-01.png");
+    content: url("../img/icones/checkmark-circle-01.png");
 }
 
 /* muda a borda da label */
