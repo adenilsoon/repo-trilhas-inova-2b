@@ -74,10 +74,10 @@ O sistema foi desenvolvido utilizando tecnologias web simples e acessíveis, com
 ## 📸 Imagens
 
 Página de cadastro de usuário e senha:
-![Página de cadastro de usuário e senha](image.png)
+![Página de cadastro de usuário e senha](img/image.png)
 
 Página de inscrição
-![Página de inscrição](image-1.png)
+![Página de inscrição](img/image-1.png)
 
 ---
 

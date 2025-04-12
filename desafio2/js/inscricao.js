@@ -154,7 +154,7 @@ formulario.addEventListener("submit", function(e) {
 
     if (!temErro) {
         alert("Inscrição realizada com sucesso!\n\nRedirecionaremos você para a página inicial...");
-        window.location.href = "../html/index.html";
+        window.location.href = "../index.html";
     }
 
 });
