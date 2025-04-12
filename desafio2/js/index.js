@@ -58,6 +58,6 @@ formCadastro.addEventListener("submit", function(e) {
         alert("O seu cadastro foi realizado com sucesso!\n\nRedirecionaremos você para a página de inscrição...");
 
         // Redireciona para a página de inscrição
-        window.location.href = "inscricao.html";
+        window.location.href = "../html/inscricao.html";
     }
 });
